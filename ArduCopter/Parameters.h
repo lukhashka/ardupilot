@@ -561,6 +561,9 @@ public:
     AP_Float    pilot_speed_dn_ms;      // maximum vertical descending velocity the pilot may request
     AP_Float    pilot_takeoff_alt_m;    // altitude vehicle will takeoff to after pilot triggers takeoff with throttle stick
 
+    // XEYES test value, streamed to the GCS as NAMED_VALUE_FLOAT "XEYES_VAL" at 1Hz
+    AP_Float    xeyes_val;
+
 #if TOY_MODE_ENABLED
     ToyMode toy_mode;
 #endif

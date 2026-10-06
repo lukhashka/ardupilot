@@ -1169,6 +1169,14 @@ const AP_Param::GroupInfo ParametersG2::var_info2[] = {
     // @Increment: 0.1
     AP_GROUPINFO("PILOT_TKO_ALT_M", 20, ParametersG2, pilot_takeoff_alt_m, PILOT_TKO_ALT_M_DEFAULT),
 
+    // index 61 is taken from the top of the table so it does not collide with indexes upstream adds from the bottom
+
+    // @Param: XEYES_VAL
+    // @DisplayName: XEYES test value
+    // @Description: Free-form value used by the XEYES integration test. It is sent to every active GCS link once per second as NAMED_VALUE_FLOAT named "XEYES_VAL", so a change is visible on the next transmission without a reboot.
+    // @User: Advanced
+    AP_GROUPINFO("XEYES_VAL", 61, ParametersG2, xeyes_val, 1.0f),
+
     // ID 62 is reserved for the AP_SUBGROUPEXTENSION
 
     AP_GROUPEND

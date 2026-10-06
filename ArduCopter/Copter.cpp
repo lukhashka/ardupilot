@@ -832,6 +832,10 @@ void Copter::one_hz_loop()
         }
     }
 #endif
+
+    // XEYES: publish XEYES_VAL on all active GCS links; the value is read on every call,
+    // so a PARAM_SET shows up on the next 1Hz tick without a reboot
+    gcs().send_named_float("XEYES_VAL", g2.xeyes_val.get());
 }
 
 void Copter::init_simple_bearing()
